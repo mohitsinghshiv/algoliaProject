@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-//import { Highlight } from "react-instantsearch-dom";
+import React from "react";
 import config from "../../config";
 export default function Hint({ hit }) {
-  //const [state, setstate] = useState([]);
-  //setstate(hit);
   return (
     <div className="hit">
       <div className="hit-image">
