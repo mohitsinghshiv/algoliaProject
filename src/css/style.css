@@ -44,12 +44,15 @@
   font-weight: bolder;
   font-size: large;
 }
-.home-title-text-p {
+.home-text-p {
   margin-top: -10px;
   margin-left: 10px;
   color: rgb(163, 163, 163);
 }
-.home-title-text-bottom {
+.home-text-bottom {
   color: rgb(163, 163, 163);
   margin-left: -43%;
+}
+.home-text-bottom-span {
+  color: rgb(90, 78, 255);
 }

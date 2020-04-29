@@ -8,13 +8,14 @@ export default function Home() {
         <p className="home-title-text">
           <span className="home-title-text-span">01</span> Connect your services
         </p>
-        <p className="home-title-text-p">
+        <p className="home-text-p">
           Documents and data will be synced to your computer for lightning-fast
           navigation.
         </p>
         <IconButton iconData={imgData} />
-        <p className="home-title-text-bottom">
-          Done connection services? <span> Back to search</span>
+        <p className="home-text-bottom">
+          Done connection services?
+          <span className="home-text-bottom-span"> Back to search</span>
         </p>
       </div>
     </div>
