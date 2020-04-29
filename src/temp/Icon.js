@@ -1,5 +1,5 @@
 const imgData = [
-  { id: 1, imgName: "chrome", link: "/index" },
+  { id: 1, imgName: "drive", link: "/search" },
   { id: 2, imgName: "confluence", link: "/" },
   { id: 3, imgName: "jira", link: "/" },
 ];

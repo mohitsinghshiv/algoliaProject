@@ -25,7 +25,7 @@ export default function Search() {
           searchAsYouType={true}
           showLoadingIndicator={true}
           onChange={(e) =>
-            setValue(e.target.value === "" ? null : e.target.value)
+            setValue(e.target.value.length >= 2 ? e.target.value : null)
           }
         />
         <main>{isShow && <Hits hitComponent={Hit} />}</main>
