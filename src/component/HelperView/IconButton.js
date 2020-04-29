@@ -5,7 +5,7 @@ import jira from "../../img/jira.png";
 import { Link } from "react-router-dom";
 
 const IMAGE = {
-  chrome: chrome,
+  chrome,
   confluence,
   jira,
 };

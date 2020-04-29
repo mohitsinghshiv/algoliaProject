@@ -8,7 +8,6 @@ export default function Index() {
   function onUpdate() {
     updateData();
   }
-  onUpdate();
   const responseGoogle = (response) => {
     console.log(response);
   };
@@ -17,7 +16,7 @@ export default function Index() {
   };
   return (
     <div>
-      <GoogleLogout
+      {/* <GoogleLogout
         className="button"
         clientId="777169248230-sh8m6vvm0e8ohc3ptf1dedatdhi9tacr.apps.googleusercontent.com"
         buttonText="Logout"
@@ -34,7 +33,7 @@ export default function Index() {
         cookiePolicy={"single_host_origin"}
       />
       <br></br>
-      {/* <button className="button" onClick={onUpdate}>
+      <button className="button" onClick={onUpdate}>
         Update Data
       </button>
       <button className="button" onClick={getToken}>
