@@ -1,19 +1,19 @@
 import React from "react";
 import Search from "../algolia/Search";
-import googleApi from "../../api/googleApi";
-import { GoogleLogin, GoogleLogout } from "react-google-login";
+//import googleApi from "../../api/googleApi";
+//import { GoogleLogin, GoogleLogout } from "react-google-login";
 
 export default function Index() {
-  const { getToken, updateData } = googleApi;
-  function onUpdate() {
-    updateData();
-  }
-  const responseGoogle = (response) => {
-    console.log(response);
-  };
-  const logout = (response) => {
-    console.log(response);
-  };
+  // const { getToken, updateData } = googleApi;
+  // function onUpdate() {
+  //   updateData();
+  // }
+  // const responseGoogle = (response) => {
+  //   console.log(response);
+  // };
+  // const logout = (response) => {
+  //   console.log(response);
+  // };
   return (
     <div>
       {/* <GoogleLogout
