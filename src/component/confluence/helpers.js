@@ -1,9 +1,12 @@
 const rp = require("request-promise-native");
 const striptags = require("striptags");
 
-const CONFLUENCE_HOST = "https://mydemodoc.atlassian.net/wiki";
-const CONFLUENCE_USERNAME = "demo email";
-const CONFLUENCE_PASSWORD = "demo1996";
+const CONFLUENCE_HOST = "http://mydemodoc.atlassian.net/wiki";
+const CONFLUENCE_USERNAME = "demo123go@gmail.com";
+const CONFLUENCE_PASSWORD = "gnTQLBqP6P3KHLF9BQe71691";
+// https://mydemodoc.atlassian.net/wiki/rest/api/content
+const buildURL = (uri) =>
+  uri ? CONFLUENCE_HOST + uri.replace(/^\/wiki/, "") : false;
 
 const parseContent = (html) =>
   html
@@ -14,9 +17,8 @@ const parseContent = (html) =>
 
 module.exports = {
   confluenceGet(uri) {
-    console.log("ddddddd");
-    const data = rp({
-      url: "https://mydemodoc.atlassian.net/wiki/rest/api/content",
+    return rp({
+      url: CONFLUENCE_HOST + uri,
       // GET parameters
       qs: {
         limit: 20, // number of item per page
@@ -35,11 +37,10 @@ module.exports = {
         Authorization: `Basic ${Buffer.from(
           `${CONFLUENCE_USERNAME}:${CONFLUENCE_PASSWORD}`
         ).toString("base64")}`,
+        "Access-Control-Allow-Origin": "*",
       },
       json: true,
     });
-    console.log("kkkkkkkkkkkkkkk", data);
-    return data;
   },
   parseDocuments(documents) {
     return documents.map(({ body }) => {
@@ -48,6 +49,7 @@ module.exports = {
         content: null, // initialize with null value instead
       };
       let content = parseContent(body.view.value);
+      console.log("content", content);
       while (content.length) {
         // extract the first 600 characters (without splitting words)
         const chunk = content.replace(/^(.{600}[^\s]*).*/, "$1");
