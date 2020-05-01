@@ -1,22 +1,14 @@
 import React, { useState } from "react";
 import Search from "../algolia/Search";
-//import googleApi from "../../api/googleApi";
 import { GoogleLogin } from "react-google-login";
 
 export default function Index() {
-  // const { getToken, updateData } = googleApi;
   const [data, setData] = useState(false);
 
-  // function onUpdate() {
-  //   updateData();
-  // }
   const responseGoogle = (response) => {
     console.log(response);
     setData(true);
   };
-  // const logout = (response) => { //GoogleLogout
-  //   console.log(response);
-  // };
   return (
     <div>
       {data ? (

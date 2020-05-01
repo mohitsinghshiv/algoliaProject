@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchJira from "./SearchConfluence";
 
 export default function ConfluenceLogin() {
-  const [state, setState] = useState(true);
+  const [state, setState] = useState(false);
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
   const [host, setHost] = useState();
