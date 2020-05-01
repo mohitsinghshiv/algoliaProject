@@ -24,12 +24,6 @@ export default function Index() {
         />
       )}
       <br></br>
-      {/* <button className="button" onClick={onUpdate}>
-        Update Data
-      </button>
-      <button className="button" onClick={getToken}>
-        AccessToken
-      </button> */}
     </div>
   );
 }
