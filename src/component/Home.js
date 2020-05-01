@@ -1,7 +1,6 @@
 import React from "react";
 import IconButton from "./HelperView/IconButton";
 import imgData from "../temp/Icon";
-import run from "./confluence/index";
 export default function Home() {
   return (
     <div className="home-margin">
@@ -14,7 +13,6 @@ export default function Home() {
           navigation.
         </p>
         <IconButton iconData={imgData} />
-        <button onClick={() => run()}>new button </button>
         <p className="home-text-bottom">
           Done connection services?
           <span className="home-text-bottom-span"> Back to search</span>

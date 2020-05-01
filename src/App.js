@@ -4,7 +4,8 @@ import Home from "./component/Home";
 import "../src/css/style.css";
 import "./App.css";
 import Index from "./component/GoogleDrive/Index";
-
+import Jiralogin from "./component/jira/jiraLogin";
+import ConfluenceLogin from "./component/confluence/ConfluenceLogin";
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,12 @@ function App() {
         <Switch>
           <Route path="/search">
             <Index />
+          </Route>
+          <Route path="/confluenceLogin">
+            <ConfluenceLogin />
+          </Route>
+          <Route path="/jiralogin">
+            <Jiralogin />
           </Route>
           <Route path="/">
             <Home />
