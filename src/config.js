@@ -7,6 +7,7 @@ const {
   REACT_APP_GOOGLE_URL,
   REACT_APP_GETTOKEN_API,
   REACT_APP_UPDATE_DATA_API,
+  REACT_APP_CONFLUENCE_DATA_API,
 } = process.env;
 
 const config = {
@@ -16,6 +17,7 @@ const config = {
   googleUrl: REACT_APP_GOOGLE_URL,
   getTokenApi: REACT_APP_GETTOKEN_API,
   updateDataApi: REACT_APP_UPDATE_DATA_API,
+  confluenceApi: REACT_APP_CONFLUENCE_DATA_API,
 };
 
 export default config;
