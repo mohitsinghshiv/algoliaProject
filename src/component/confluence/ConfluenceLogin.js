@@ -23,12 +23,10 @@ export default function ConfluenceLogin() {
     })
       .then((result) => result.json())
       .then((states) => {
-        console.log("lllll:>>", states);
         setState(true);
       })
       .catch((error) => {
         setState(false);
-        console.log("error");
       });
     event.preventDefault();
   };

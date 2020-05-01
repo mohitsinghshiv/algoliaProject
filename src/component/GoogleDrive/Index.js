@@ -6,7 +6,7 @@ export default function Index() {
   const [data, setData] = useState(false);
 
   const responseGoogle = (response) => {
-    console.log(response);
+    //console.log(response);
     setData(true);
   };
   return (
