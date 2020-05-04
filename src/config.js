@@ -8,6 +8,9 @@ const {
   REACT_APP_GETTOKEN_API,
   REACT_APP_UPDATE_DATA_API,
   REACT_APP_CONFLUENCE_DATA_API,
+  REACT_APP_UPDATE_GOOGLE_DATA_API,
+  REACT_APP_GOOGLE_CLIENT_ID,
+  REACT_APP_GOOLGE_DRIVE_SCOPE,
 } = process.env;
 
 const config = {
@@ -18,6 +21,9 @@ const config = {
   getTokenApi: REACT_APP_GETTOKEN_API,
   updateDataApi: REACT_APP_UPDATE_DATA_API,
   confluenceApi: REACT_APP_CONFLUENCE_DATA_API,
+  updateGoogleDataApi: REACT_APP_UPDATE_GOOGLE_DATA_API,
+  googleClientId: REACT_APP_GOOGLE_CLIENT_ID,
+  googleDriveScope: REACT_APP_GOOLGE_DRIVE_SCOPE,
 };
 
 export default config;
