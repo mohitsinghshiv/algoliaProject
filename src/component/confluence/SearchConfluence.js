@@ -7,7 +7,7 @@ import {
   Hits,
   Highlight,
 } from "react-instantsearch-dom";
-const { algoliaId, algoliaApiKey, algoliaIndexName } = config;
+const { algoliaId, algoliaApiKey, algoliaConfluenceIndexName } = config;
 
 const searchClient = algoliasearch(algoliaId, algoliaApiKey);
 
@@ -43,7 +43,10 @@ export default function SearchConfluence() {
 
   return (
     <div className="search-margin">
-      <InstantSearch indexName={algoliaIndexName} searchClient={searchClient}>
+      <InstantSearch
+        indexName={algoliaConfluenceIndexName}
+        searchClient={searchClient}
+      >
         <SearchBox
           className="searchbox-margin"
           autoFocus={false}

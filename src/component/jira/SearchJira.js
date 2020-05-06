@@ -7,7 +7,7 @@ import {
   Highlight,
 } from "react-instantsearch-dom";
 import config from "../../config";
-const { algoliaId, algoliaApiKey, algoliaIndexName } = config;
+const { algoliaId, algoliaApiKey, algoliaJiraIndexName } = config;
 const searchClient = algoliasearch(algoliaId, algoliaApiKey);
 
 const Hit = ({ hit }) => (
@@ -54,7 +54,10 @@ export default function SearchJira() {
 
   return (
     <div className="search-margin">
-      <InstantSearch indexName={algoliaIndexName} searchClient={searchClient}>
+      <InstantSearch
+        indexName={algoliaJiraIndexName}
+        searchClient={searchClient}
+      >
         <SearchBox
           className="searchbox-margin"
           autoFocus={false}
