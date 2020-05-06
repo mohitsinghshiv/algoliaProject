@@ -14,7 +14,7 @@ export default function Home() {
         </p>
         <IconButton iconData={imgData} />
         <p className="home-text-bottom">
-          Done connection services?
+          Done connection services ?
           <span className="home-text-bottom-span"> Back to search</span>
         </p>
       </div>
