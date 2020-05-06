@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SearchJira from "./SearchConfluence";
-
+import config from "../../config";
 export default function ConfluenceLogin() {
   const [state, setState] = useState(false);
   const [username, setUsername] = useState();
@@ -14,7 +14,7 @@ export default function ConfluenceLogin() {
       password,
     };
 
-    fetch(`http://localhost:3001/api/confluence/auth`, {
+    fetch(config.confluenceAuthApi, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
