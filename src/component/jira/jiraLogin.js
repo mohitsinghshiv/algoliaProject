@@ -1,6 +1,6 @@
 import React from "react";
-import { render } from "@testing-library/react";
 import SearchJira from "./SearchJira";
+import config from "../../config";
 
 class jiraLogin extends React.Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class jiraLogin extends React.Component {
       password: password,
     };
 
-    fetch(`http://localhost:3001/api/auth`, {
+    fetch(config.jiraAuth, {
       method: "POST",
       headers: {
         "Content-type": "application/json",

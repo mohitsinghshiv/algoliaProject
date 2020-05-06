@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from "react";
 import algoliasearch from "algoliasearch/lite";
+import config from "../../config";
 import {
   InstantSearch,
   SearchBox,
   Hits,
   Highlight,
 } from "react-instantsearch-dom";
+const { algoliaId, algoliaApiKey, algoliaIndexName } = config;
 
-const searchClient = algoliasearch(
-  "1BG45YLJO5",
-  "38a1d2a23ed5658bd4e874e45074a2ce"
-);
+const searchClient = algoliasearch(algoliaId, algoliaApiKey);
 
 const Hit = ({ hit }) => (
   <div className="hit">
@@ -44,7 +43,7 @@ export default function SearchConfluence() {
 
   return (
     <div className="search-margin">
-      <InstantSearch indexName="demoConfluence" searchClient={searchClient}>
+      <InstantSearch indexName={algoliaIndexName} searchClient={searchClient}>
         <SearchBox
           className="searchbox-margin"
           autoFocus={false}
