@@ -30,7 +30,7 @@ const config = {
   confluenceAuthApi: REACT_APP_CONFLUENCE_AUTH_API,
   updateGoogleDataApi: REACT_APP_UPDATE_GOOGLE_DATA_API,
   googleClientId: REACT_APP_GOOGLE_CLIENT_ID,
-  googleDriveScope: REACT_APP_GOOGLE_DRIVE_SCOPE,
+  googleDriveScope: REACT_APP_GOOGLE_DRIVE_SCOPE, //https://www.googleapis.com/auth/drive.metadata.readonly https://www.googleapis.com/auth/drive.photos.readonly https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/drive.metadata https://www.googleapis.com/auth/drive.file
   jiraAuth: REACT_APP_JIRA_AUTH,
 };
 
